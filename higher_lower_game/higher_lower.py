@@ -1,7 +1,7 @@
 import random
-from higher_lower_game.higher_lower_data import data
-from higher_lower_game.higher_lower_art import logo
-from higher_lower_game.higher_lower_art import vs
+from higher_lower_data import data
+from higher_lower_art import logo
+from higher_lower_art import vs
 import os
 
 
@@ -37,11 +37,25 @@ def compare(person_a_followers_input,person_b_followers_input):
 
 
 person_a=random.choice(data)
+person_b=random.choice(data)
+if person_a==person_b:
+        person_b=random.choice(data)
+if person_a==person_b:
+        person_b=random.choice(data)
+if person_a==person_b:
+        person_b=random.choice(data)
+if person_a==person_b:
+        person_b=random.choice(data)
+
+
+
+correct_guesses=0
 
 
 game_over=False
 while game_over==False:
     print(logo)
+
     
     
     person_a_followers=person_a["follower_count"]
@@ -51,9 +65,11 @@ while game_over==False:
     
 
     print(vs)
-    person_b=random.choice(data)
+    
+    
     person_b_followers=person_b["follower_count"]
     person_2(person_b)
+
     print(person_b_followers)
     
 
@@ -63,11 +79,24 @@ while game_over==False:
 
     if question==winner:
         clear()
-        print("Correct")
+        correct_guesses+=1
+        print(f"You're right!! Curent score: {correct_guesses}")
+
         person_a=person_b
+        if person_a==person_b:
+            person_b=random.choice(data)
+        if person_a==person_b:
+            person_b=random.choice(data)
+        if person_a==person_b:
+            person_b=random.choice(data)
+        if person_a==person_b:
+            person_b=random.choice(data)
+        
+        
+        
     else:
         game_over=True
-        print("Sorry that was wrong, you lose")
+        print(f"Sorry that was wrong, Final score: {correct_guesses}")
 
 
 
