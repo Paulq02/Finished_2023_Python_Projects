@@ -92,47 +92,82 @@ while machine_on==True:
     if order=="latte":
         message=latte_drink(water=resources["water"],milk=resources["milk"],coffee=resources["coffee"])
         if not message== 0:
+            print("Please insert coins.")
             quarters=float(input("how many quarters?: "))
             dimes=float(input("how many dimes?: "))
             nickles=float(input("how many nickels?: "))
             pennies=float(input("how many pennies?: "))
             total=calculate(quarters_input=quarters,dimes_input=dimes,nickels_input=nickles,pennies_input=pennies)
-            if total>=2.50:
+            if total==2.50:
                 resources['water']-=200
                 resources["milk"]-=150
                 resources["coffee"]-=24
                 resources["money"]+=total
-                
                 print(f"Enjoy your {order}")
-        
+            elif total>2.50:
+                refund=total-2.50
+                resources['water']-=200
+                resources["milk"]-=150
+                resources["coffee"]-=24
+                resources["money"]+=total
+                print(f"Here is your ${round(refund,2)} in change.")
+                print(f"Enjoy your {order}")
+            elif total<2.50:
+                print(f"Sorry thats not enought money, You've been refunded ${round(total,2)} ")
+
+
+
     if order=="espresso":
         message=espresso_drink(water=resources["water"],coffee=resources["coffee"])
         if not message== 0:
+            print("Please insert coins.")
             quarters=float(input("how many quarters?: "))
             dimes=float(input("how many dimes?: "))
             nickles=float(input("how many nickels?: "))
             pennies=float(input("how many pennies?: "))
             total=calculate(quarters_input=quarters,dimes_input=dimes,nickels_input=nickles,pennies_input=pennies)
-            if total>=1.50:
+            if total==1.50:
                 resources['water']-=50
                 resources["coffee"]-=18
                 resources["money"]+=total
-            
                 print(f"Enjoy your {order}")
+            elif total>1.50:
+                refund=total-1.50
+                resources['water']-=200
+                resources["milk"]-=150
+                resources["coffee"]-=24
+                resources["money"]+=total
+                print(f"Here is your ${round(refund,2)} in change.")
+                print(f"Enjoy your {order}")
+            elif total<1.50:
+                print(f"Sorry that's not enough money, You've been refunded ${round(total,2)} ")
+
+
     if order=="cappuccino":
         message=cappuccino_drink(water=resources["water"],milk=resources["milk"],coffee=resources["coffee"])
         if not message== 0:
+            print("Please insert coins.")
             quarters=float(input("how many quarters?: "))
             dimes=float(input("how many dimes?: "))
             nickles=float(input("how many nickels?: "))
             pennies=float(input("how many pennies?: "))
             total=calculate(quarters_input=quarters,dimes_input=dimes,nickels_input=nickles,pennies_input=pennies)
-            if total>=3.00:
+            if total==3.00:
                 resources['water']-=250
                 resources["milk"]-=100
                 resources["coffee"]-=24
                 resources["money"]+=3.0
                 print(f"Enjoy your {order}")
+            elif total>3.00:
+                refund=total-3.00
+                resources['water']-=200
+                resources["milk"]-=150
+                resources["coffee"]-=24
+                resources["money"]+=total
+                print(f"Here is your ${round(refund,2)} in change.")
+                print(f"Enjoy your {order}")
+            elif total<3.00:
+                print(f"Sorry that's not enough money, You've been refunded ${round(total,2)}")
 
 
         
