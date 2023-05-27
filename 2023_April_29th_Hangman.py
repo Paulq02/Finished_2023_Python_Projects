@@ -37,7 +37,7 @@ for _ in chosen_word:
     if _.isalnum():
         answer+="_"
     else:
-        answer+=_
+        answer+=" "
 print(" ".join(answer))
 print()
 print()
