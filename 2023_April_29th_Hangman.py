@@ -1,5 +1,5 @@
 import random
-from April_29th_Hangman_list import word_list
+
 from April_29th_Hangman_art import logo
 from April_29th_Hangman_art import stages
 import os
