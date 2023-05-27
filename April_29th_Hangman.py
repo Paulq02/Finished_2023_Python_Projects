@@ -1,9 +1,9 @@
 import random
-from April_29th_Hangman_list import word_list
+
 from April_29th_Hangman_art import logo
 from April_29th_Hangman_art import stages
 import os
-from April_29th_Hangman_list import ufc_fighters
+from NEW_hangman_list import ufc_fighters
 
 def clear():
     os.system('clear')
