@@ -74,7 +74,7 @@ while done_coding==False:
     
     #so essentially what this modulo operator does is allow you to enter any number and it will loop back to the begining of the list
     
-    #For example: if I type 'a' as my message and mt shift number is 27 my output will be 'b' That's because the letter 'a' is index postion 0, 'z' is index postion 25 so then it loops back to 'a' then 'b' which is 27 places  """
+    #For example: if I type 'a' as my message and my shift number is 27 my output will be 'b' That's because the letter 'a' is index postion 0, 'z' is index postion 25 so then it loops back to 'a' then 'b' which is 27 places  """
 
 
 
