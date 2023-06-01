@@ -32,7 +32,7 @@ resources = {
     "coffee": 100,
 }
 #We added the key "money" to the resources dictionary to keep track of how much money we're collecting
-resources['money']=0
+resources['money']=round(0,2)
 
 
 def latte_drink(water,milk,coffee):
@@ -110,10 +110,11 @@ while machine_on==True:
         machine_on=False
     
     #If you would like to know how much resources (water,milk,coffee) are left in the virtual coffee machine, typing "report" will display a detailed resources list
+    if order=="report":   
         print(f"Water: {resources['water']}ml")
         print(f"Milk:  {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}g")
-        print(f"Money: ${resources['money']}")
+        print(f"Money: ${resources['money']}0")
     
     #if user orders a latte 
     if order=="latte":
@@ -150,7 +151,7 @@ while machine_on==True:
                 resources['water']-=200
                 resources["milk"]-=150
                 resources["coffee"]-=24
-                resources["money"]+=total
+                resources["money"]+=2.50
                 print(f"Here is your ${round(refund,2)} in change.")
                 print(f"Enjoy your {order}")
             elif total<2.50:
@@ -194,7 +195,7 @@ while machine_on==True:
                 resources['water']-=200
                 resources["milk"]-=150
                 resources["coffee"]-=24
-                resources["money"]+=total
+                resources["money"]+=1.50
                 print(f"Here is your ${round(refund,2)} in change.")
                 print(f"Enjoy your {order}")
             elif total<1.50:
@@ -233,9 +234,9 @@ while machine_on==True:
                 #If the user entered more than what the drink costs the drink is made and the user is refunded the remaining change
                 refund=total-3.00
                 resources['water']-=200
-                resources["milk"]-=150
+                resources["milk"]-=100
                 resources["coffee"]-=24
-                resources["money"]+=total
+                resources["money"]+=3.00
                 print(f"Here is your ${round(refund,2)} in change.")
                 print(f"Enjoy your {order}")
             elif total<3.00:
