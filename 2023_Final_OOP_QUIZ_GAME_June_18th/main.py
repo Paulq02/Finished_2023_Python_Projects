@@ -16,8 +16,8 @@ for question in question_data:
     #After getting a hold of each of these 2 values, we assigned 2 variables to hold their value
 
     #"question_text" will hold the question that will be displayed to the user and "answer_text" will hold the correct answer
-    question_text=question["text"]
-    answer_text=question["answer"]
+    question_text=question["question"]
+    answer_text=question["correct_answer"]
     
     #After assigning variables to these values we are going to format these questions from the question class in another module we've imported
 
