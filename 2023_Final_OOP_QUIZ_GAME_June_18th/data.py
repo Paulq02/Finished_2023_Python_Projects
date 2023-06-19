@@ -44,7 +44,7 @@ question_data = [
     },
     {
         "category": "Entertainment: Film", "type": "boolean", "difficulty": "easy",
-        "question": "Brandon Routh plays the titular character in the movie 'John Wick';.",
+        "question": "Brandon Routh plays the titular character in the movie 'John Wick'.",
         "correct_answer": "False",
         "incorrect_answers": ["True"]
     },
