@@ -27,21 +27,21 @@ def random_color():
 #    shape(number_of_sides)
 #    timmy.color(random.choice(colors))
 
-timmy.width(10)
-directions=[0, 90, 180, 270]
-for _ in range(300):
-    timmy.color(random_color())
-    timmy.forward(30)
-    timmy.setheading(random.choice(directions))
+#timmy.width(10)
+#directions=[0, 90, 180, 270]
+#for _ in range(300):
+#    timmy.color(random_color())
+#    timmy.forward(30)
+#    timmy.setheading(random.choice(directions))
 
-#def draw_circle(size_gap):
-#    for _ in range(int(360/size_gap)):
-#        timmy.color(random_color())
-#        timmy.circle(100)
-#        current_position=timmy.heading()
-#        timmy.setheading(current_position + size_gap)
+def draw_circle(size_gap):
+    for _ in range(int(360/size_gap)):
+        timmy.color(random_color())
+        timmy.circle(100)
+        current_position=timmy.heading()
+        timmy.setheading(current_position + size_gap)
 
-#draw_circle(30)
+draw_circle(30)
 
 
 
